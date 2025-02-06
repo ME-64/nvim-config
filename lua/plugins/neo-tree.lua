@@ -19,7 +19,7 @@ return {
     {
       "<leader>e",
       function()
-        require("neo-tree.command").execute({ toggle = false, dir = LazyVim.root(), position = "current" })
+        require("neo-tree.command").execute({ toggle = false, dir = vim.fn.expand("%:p:h"), position = "current" })
       end,
       desc = "Explorer NeoTree in current buffer (Root Dir)",
     },
